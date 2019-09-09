@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Hello man</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<meta charset="utf-8">
+<meta charset="utf-8">
+<script type="text/javascript">
+	// первая загадка
+	var Riddle1 = 'Сто одежек и все без застежек. Что это?';
+	var Ansver1 = 'капуста';
+	var userAnsver1 = '';
+	var isGuessed1  = false;
+
+	// вторая загадка
+	var Riddle2 = 'Сидит девица в темнице, а коса на улице. Что это?';
+	var Ansver2 = 'морковь';
+	var userAnsver2 = '';
+	var isGuessed2  = false;
+
+	// третья загадка
+	var Riddle3 = 'Светит, сверкает, всех согревает.';
+	var Ansver3 = 'солнце';
+	var userAnsver3 = '';
+	var isGuessed3  = false;
+
+
+	var TotalScore = 0;
+	var isExsit = false;
+
+	do { // загадывать загадки по кругу, пока пользователю не надоест или пока он не отгадает все три
+		// выбираем какую загадку загадывать
+		if(!isGuessed1) {
+			userAnsver1 = prompt('Отгадайте загадку:\n' + Riddle1 + '\n(Если устали отгадывать, введите 0 или Exit)');
+			if(userAnsver1 == '0' || userAnsver1.toLowerCase() == 'exit') {
+				alert('Поздравляем! Вы набрали ' + TotalScore + ' и решили завершить игру!\nДо новых встреч!');
+				isExsit = true;
+				break;
+			}
+			if(userAnsver1.toLowerCase() == Ansver1) {
+				alert('Вы угадали и заработали одно очко!');
+				isGuessed1 = true;
+				TotalScore += 1;
+			} else {
+				alert('Ошибочка вышла....Но ничего страшного, попробуйте отгадать другую загадку!');
+			}
+		} else if(!isGuessed2) {
+			userAnsver2 = prompt('Отгадайте загадку:\n' + Riddle2 + '\n(Если устали отгадывать, введите 0 или Exit)');
+			if(userAnsver2 == '0' || userAnsver2.toLowerCase() == 'exit') {
+				alert('Поздравляем! Вы набрали ' + TotalScore + ' и решили завершить игру!\nДо новых встреч!');
+				isExsit = true;
+				break;
+			}
+			if(userAnsver2.toLowerCase() == Ansver2) {
+				alert('Вы угадали и заработали одно очко!');
+				isGuessed2 = true;
+				TotalScore += 1;
+			} else {
+				alert('Ошибочка вышла....Но ничего страшного, попробуйте отгадать другую загадку!');
+			}
+		} else if(!isGuessed3) {
+			userAnsver3 = prompt('Отгадайте загадку:\n' + Riddle3 + '\n(Если устали отгадывать, введите 0 или Exit)');
+			if(userAnsver3 == '0' || userAnsver3.toLowerCase() == 'exit') {
+				alert('Поздравляем! Вы набрали ' + TotalScore + ' и решили завершить игру!\nДо новых встреч!');
+				isExsit = true;
+				break;
+			}
+			if(userAnsver3.toLowerCase() == Ansver3) {
+				alert('Вы угадали и заработали одно очко!');
+				isGuessed3 = true;
+				TotalScore += 1;
+			} else {
+				alert('Ошибочка вышла....Но ничего страшного, попробуйте отгадать другую загадку!');
+			}
+		} else {
+			// все загадки отгаданы
+			alert('Поздравляем! Вы отгадали все загадки и набрали ' + TotalScore + ' очков!\nДо новых встреч!');
+			isExsit = true;
+		}
+	} while(!isExsit);
+</script>
+</body>
+</html>

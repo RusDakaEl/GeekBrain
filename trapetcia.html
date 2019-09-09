@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Hello man</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+	var answer = parseInt(Math.random() * 100);
+
+	var playerNumber = 1;
+
+
+	while (true)  {
+
+		var userAnswer = prompt("Игра на 2-х Угадай число! Число будет загаано от 1 до 100. \n  " +
+				"Подсказок не будет, но у вас бесконечное число попыток! \n " +
+				"По желанию игрок может выйти введя q. \n " +
+				"Последний игрок который вышел считается проигравшим!");
+
+		if(userAnswer == 'q')
+			break;
+
+		userAnswer = parseInt(userAnswer);
+
+		if(userAnswer == answer) {
+		alert("Поздравляю! Победил игрок " + playerNumber);
+		break;
+	} else if (userAnswer > answer) {
+		alert ("Вы ввели слишком больше число");
+	} else if (userAnswer < answer) {
+		alert ("Вы ввели слишком маленькое число");
+	}
+	}
+</script>
+</body>
+</html>

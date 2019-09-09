@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Hello man</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+	var Deposit = +prompt("Сколько Вы планируете положить на депозит?");
+	var Percent = +prompt("Какой процент предлагает банк?");
+	const year = ['год', 'года', 'года', 'года', 'лет'];
+
+	for(var i = 1; i <= 5; i++){
+		Deposit = Deposit + (Deposit / 100*Percent);
+		document.write("Через " + i + " " + year[i-1] + " размер Вашего депозита составит " + Deposit.toFixed(2) + "<br>");
+	};
+</script>
+</body>
+</html>
